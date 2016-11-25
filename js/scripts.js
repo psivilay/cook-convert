@@ -8,7 +8,14 @@ $(document).ready(function() {
     $(".convertshow").show();
   });
 
-  $("form#cups-to-quarts").submit(function())
+  $("form#cups-to-quarts").submit(function(event) {
+    event.preventDefault();
+    var cupInput = parseInt($("#cups").val());
+
+    var result = cupToQuart(cupInput);
+    $("#output").text(result);
+    $(".convershow").show();
+  });
 
   $("form#cups-to-gallons").submit(function(event) {
     event.preventDefault();
@@ -19,8 +26,6 @@ $(document).ready(function() {
     $(".convertshow").show();
   });
 
-  //var pintInput = parseInt($("#pints").val());
-  //var gallonInput = parseInt($("#gallons").val());
 });
 
 var cupToPint = function(cupInput) {
@@ -29,7 +34,7 @@ var cupToPint = function(cupInput) {
 
 var cupToQuart = function(cupInput) {
   return cupInput + " cups is " + cupInput / 4 + " quarts."
-}
+};
 
 var cupToGallon = function(cupInput) {
   return cupInput + " cups is " + cupInput / 16 + " gallons."

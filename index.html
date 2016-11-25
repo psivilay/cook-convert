@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Cooking Converter</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Use the conversion form below to avoid royally screwing up your next family dinner!</h1>
+
+      <form id="cups-to-pints">
+        <div class="form-group">
+          <label for="cups">Cups</label>
+          <input id="cups" class="form-control" type="text">
+        </div>
+        <button class="submit" type="btn">to pints</button>
+      </form>
+
+      <form id="cups-to-quarts">
+        <button class="submit" type="btn">to quarts</button>
+      </form>
+
+      <form id="cups-to-gallons">
+        <button class="submit" type="btn">to gallons</button>
+      </form>
+
+      <h1 class="convertshow">Conversion Result: <span id="output"></span></h1>
+
+    </div>
+  </body>
+</html>
